@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>鼠标点击显示语句</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html,body{
+			width: 100%;
+			height: 100%;
+		}
+        body{
+            background: url(https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1563768940,3545635858&fm=26&gp=0.jpg) no-repeat;
+            background-size:100% 100%;
+        }
+		.key{                             
+            z-index:99999;     
+            position:absolute;   
+            color:#09064F
+            font-size:24px;
+            font-weight:700;  
+            font-family:"微软雅黑";  
+            cursor:default;    
+        }   
+	</style>
+</head>
+<body>
+</body>
+</html>
+<script>
+var div = document.querySelector("div")
+document.body.onclick = function(e){   
+        var dfs=[    
+            "您刚才的点击使您的体重增加了"+Math.floor(Math.random()*100000)+"g",
+            "您刚才的点击使您的身高长高了"+Math.floor(Math.random()*10)+"mm",
+            "您刚才的点击使您的头发减少了"+Math.floor(Math.random()*10000)+"根",      
+            "您刚才的点击使您的银行卡被盗刷了"+Math.floor(Math.random()*10000)+"元",
+            "您刚才的点击使您自己的生命在"+Math.random()*10000000000+20000000000+"秒结束",  
+            "您刚才的点击使您穿越回到"+Math.random()*5000+"年前",
+            "您刚才的点击使美国国道"+Math.random()*1000+"号发生坍塌",
+            "您刚才的点击使中国计生局放开了"+Math.floor(Math.random()*100)+"胎政策。",  
+            "您刚才的点击使日本群岛上的一座超级火山爆发了",  
+            "您刚才的点击使中华人民共和国国家安全部收购了FBI",  
+            "您刚才的点击引爆了"+Math.random()*10000+"光年外的一颗恒星",           
+            "您刚才的点击熄灭了宇宙中蓝色空间号二号主引擎",       
+            "您刚才的点击让张一山和杨紫在一起了",  
+            "您刚才的点击使三体第"+Math.floor(Math.random()*100)+"舰队起航了",   
+            "您刚才的点击使第"+Math.floor(Math.random()*10000)+"号宇宙毁灭了",   
+            "您刚才的点击向太阳发射了一颗光粒",   
+            "您刚才的点击导致月球撞上了地球",  
+            "您刚才的点击令人类文明将在"+(new Date()).getFullYear()+"年"+((new Date()).getMonth()+1)+"月"+(new Date()).getUTCDate()+"日23:59:59毁灭",  
+            "您刚才的点击启动了DF42发射系统",
+            "您刚才的点击使南极大陆融化了", 
+            "您刚才的点击使苏格兰脱离了英格兰统治",  
+            "您刚才的点击使普京按下了威慑开关",  
+            "您刚才的点击引起了"+Math.random()*10000+"光年外一个行星的爆炸",  
+            "您刚才的点击使黑洞吞噬了"+Math.random()*10000000+"颗行星",  
+            "您刚才的点击引起了所有行星上的地震",  
+            "您刚才的点击使一台诺基亚手机摔碎了",  
+            "您刚才的点击使阿里巴巴倒闭了",  
+            "您刚才的点击打开了外星人通往地球的大门",  
+            "千万不要再次点击鼠标",  
+            "真的千万不要再次点击鼠标"  
+        ];  
+        var n=Math.floor(Math.random() * dfs.length + 1)-1;   //随机获取一条数据
+        var key = document.createElement("p");
+        key.className = "key";
+        key.innerHTML =dfs[n];
+        this.appendChild(key);
+        var x = e.pageX,y = e.pageY;
+        key.style.position = "absolute";
+        key.style.top = y+20+"px";
+        key.style.left = x+"px";
+        setTimeout(function(){
+            document.body.removeChild(key);
+        },3000)
+    };     
+</script>  
