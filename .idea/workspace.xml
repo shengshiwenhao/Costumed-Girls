@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3e6a53fe-648f-4f26-acd9-4f4a733a5b76" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fun/dianjizi.html" beforeDir="false" afterPath="$PROJECT_DIR$/fun/dianjizi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fun/fishingNet.html" beforeDir="false" afterPath="$PROJECT_DIR$/fun/fishingNet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/objectOriented/AovOpoLeftXx.html" beforeDir="false" afterPath="$PROJECT_DIR$/objectOriented/AovOpoLeftXx.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objectOriented/CatOpoUpXx.html" beforeDir="false" afterPath="$PROJECT_DIR$/objectOriented/CatOpoUpXx.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objectOriented/DaOpoUpXx.html" beforeDir="false" afterPath="$PROJECT_DIR$/objectOriented/DaOpoUpXx.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objectOriented/OnmyojiOpoLeft.html" beforeDir="false" afterPath="$PROJECT_DIR$/objectOriented/OnmyojiOpoLeft.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objectOriented/PmOpoLeftXx.html" beforeDir="false" afterPath="$PROJECT_DIR$/objectOriented/PmOpoLeftXx.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +33,8 @@
       <option name="presentableId" value="Default" />
       <updated>1608793981858</updated>
       <workItem from="1608793983579" duration="408000" />
-      <workItem from="1608796909271" duration="480000" />
+      <workItem from="1608796909271" duration="558000" />
+      <workItem from="1608797619909" duration="222000" />
     </task>
     <servers />
   </component>
