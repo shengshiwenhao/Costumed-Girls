@@ -16,7 +16,7 @@
 		border: 10px #999 solid;
 		box-sizing: border-box;
 		background: url(../img/lxh/lxhh1.jpg);
-		background-size: 130% 100%;	
+		background-size: 130% 100%;
 		overflow: hidden;
 	}
 	h1 span{
@@ -30,7 +30,7 @@
 		font-weight: 700;
 	}
 	h1 .start{
-		width: 100%;	
+		width: 100%;
 	}
 	h1 .suspend,h1 .proceed{
 		float: left;
@@ -59,9 +59,9 @@
 		width: 8.333%;
 		height: 100%;
 		overflow: hidden;
-		cursor: pointer; 
+		cursor: pointer;
 	}
-	article p{	
+	article p{
 		width: 100%;
 		height: 12.5%;
 		border: 1px solid #ccc;
@@ -74,45 +74,45 @@
 		display: none;
 	}
 	/*游戏结束盒子*/
-	#gameover { 
-	   position: absolute; 
-	   left: 40%;  
-	   top: 30%; 
-	   width: 25%; 
-	   height: 30%; 
+	#gameover {
+	   position: absolute;
+	   left: 40%;
+	   top: 30%;
+	   width: 25%;
+	   height: 30%;
 	   box-sizing: border-box;
-	   box-shadow: 0 0 4px #222222; 
+	   box-shadow: 0 0 4px #222222;
 	   background-color: #e1e1e1;
 	   background:url(../img/lxh/lxhfo.jpg);
 	   background-size: 130% 100%;
-	   text-align: center;  
-	   display: none; 
+	   text-align: center;
+	   display: none;
 	}
-	#gameover uu { 
+	#gameover uu {
 	   display: block;
-	   width: 100%; 
-	   height: 20%; 
-	   text-align: center; 
-	   font-size: 36px; 
-	   color: #000000; 
+	   width: 100%;
+	   height: 20%;
+	   text-align: center;
+	   font-size: 36px;
+	   color: #000000;
 	   font-weight: 700;
 	   text-decoration: none;
 	}
-	#gameover .qd{ 
-	   width: 60%; 
-	   height: 25%; 
-	   text-align: center; 
-	   font-size: 20px; 
-	   background: #336688; 
-	   color: #ffffff; 
+	#gameover .qd{
+	   width: 60%;
+	   height: 25%;
+	   text-align: center;
+	   font-size: 20px;
+	   background: #336688;
+	   color: #ffffff;
 	   border-radius: 30%;
 	   margin-left: 20%;
-	   line-height: 250%; 
+	   line-height: 250%;
 	}
-	#gameover .nl{ 
-	   text-align: center; 
-	   font-size: 20px; 
-	   color: #ffffff;  
+	#gameover .nl{
+	   text-align: center;
+	   font-size: 20px;
+	   color: #ffffff;
 	}
 	</style>
 </head>
@@ -122,7 +122,7 @@
 		<button class="suspend">暂停</button>
 		<button class="proceed">继续</button>
 		<br/>
-		罗小黑战纪<small>(面向对象版)</small><br/>
+		罗小黑战纪<br/>
 		Cat.XX(UP)
 		<br/>
 		<span>分数：</span>
@@ -334,7 +334,7 @@ function XxPlay(scoreBox,timeBox,bigScore,article,divs,ps,pictures,suspend,proce
 	this.countdown = null;
 	this.score = 0;
 	this.hits = 0;
-	this.pictureArr = new Array();		  
+	this.pictureArr = new Array();
 	this.init();
 }
 XxPlay.prototype = {
@@ -355,22 +355,22 @@ XxPlay.prototype = {
 			this.ps[i].idx = i;
 			this.ps[i].onclick = function(){
 				that.hits++;
-				if(that.hits==3){ 
+				if(that.hits==3){
 					if(that.pictures[that.pictureArr[0]].className != that.pictures[that.pictureArr[1]].className){
 						that.pictures[that.pictureArr[0]].style.display = "none";
 						that.pictures[that.pictureArr[1]].style.display = "none";
 					}
-					that.hits=1; 
-					that.pictureArr = new Array(); 
+					that.hits=1;
+					that.pictureArr = new Array();
 				}
-				that.pictures[this.idx].style.display = "block"; 
-				that.pictureArr[that.hits-1] = this.idx; 
+				that.pictures[this.idx].style.display = "block";
+				that.pictureArr[that.hits-1] = this.idx;
 				if (that.hits == 2&&that.pictureArr[0]==that.pictureArr[1]) {
 					that.hits = 1;
 				}
 				if(that.hits == 2&&that.pictureArr[0]!=that.pictureArr[1]){
 					if(that.pictures[that.pictureArr[0]].className == that.pictures[that.pictureArr[1]].className){
-						setTimeout(function(){ 
+						setTimeout(function(){
 							that.ps[that.pictureArr[0]].style.display = "none";
 							that.ps[that.pictureArr[1]].style.display = "none";
 							that.score += step;
@@ -399,7 +399,7 @@ XxPlay.prototype = {
 								}
 								that.gameOver(false);
 							}
-						},200);					
+						},200);
 					}
 				}
 			}
@@ -423,7 +423,7 @@ XxPlay.prototype = {
 	},
 	background:function(bg,bs){
 		this.article.style.background="url(../img/"+bg+"/"+bg+"xx1.jpg)";
-		this.article.style.backgroundSize= bs;	
+		this.article.style.backgroundSize= bs;
 	},
 	PCbtn:function(){
 		var that = this;
@@ -435,7 +435,7 @@ XxPlay.prototype = {
 			that.pause = false;
 			if (that.countdown>0) {
 				that.divsDisplay("block");
-			}		
+			}
 		}
 	},
 	countDown:function(count){
@@ -478,7 +478,7 @@ XxPlay.prototype = {
 			location.reload();
 		}
 	}
-}			
+}
 start.onclick = function(){
 	var xxPlays = new XxPlay(scoreBox,timeBox,bigScore,article,divs,ps,pictures,suspend,proceed,gameover);
 }
